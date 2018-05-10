@@ -1,148 +1,155 @@
-.title { 
-    text-align: center;
-    font-size: 30px;
+.title {
+  text-align: center;
+  font-size: 30px;
 }
 
-.loginContainer{
-    position: relative;
-    width: 300px;
-    margin: 80px auto;
-    padding: 20px 40px 40px;
-    text-align: center;
-    background: #fff;
-    border: 1px solid #ccc;
+.loginContainer {
+  position: relative;
+  width: 300px;
+  margin: 80px auto;
+  padding: 20px 40px 40px;
+  text-align: center;
+  background: #fff;
+  border: 1px solid #ccc;
 }
 
-#output{
-    position: absolute;
-    width: 300px;
-    top: -75px;
-    left: 0;
-    color: #fff;
+#output {
+  position: absolute;
+  width: 300px;
+  top: -75px;
+  left: 0;
+  color: #fff;
 }
 
-.loginContainer::before,.loginContainer::after{
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 3.5px;
-    left: 0;
-    background: #fff;
-    z-index: -1;
-    -webkit-transform: rotateZ(3deg);
-    -moz-transform: rotateZ(3deg);
-    -ms-transform: rotateZ(3deg);
-    border: 2px dotted #ccc;
-
+.loginContainer::before,
+.loginContainer::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 3.5px;
+  left: 0;
+  background: #fff;
+  z-index: -1;
+  -webkit-transform: rotateZ(3deg);
+  -moz-transform: rotateZ(3deg);
+  -ms-transform: rotateZ(3deg);
+  border: 2px dotted #ccc;
 }
 
-.loginContainer::after{
-    top: 5px;
-    z-index: -2;
-    -webkit-transform: rotateZ(-6deg);
-     -moz-transform: rotateZ(-6deg);
-      -ms-transform: rotateZ(-6deg);
-
+.loginContainer::after {
+  top: 5px;
+  z-index: -2;
+  -webkit-transform: rotateZ(-6deg);
+  -moz-transform: rotateZ(-6deg);
+  -ms-transform: rotateZ(-6deg);
 }
 
-.avatar{
-    width: 100px;height: 100px;
-    margin: 10px auto 30px;
-    border-radius: 100%;
-    border: 2px solid #aaa;
-    background-size: cover;
+.avatar {
+  width: 100px;
+  height: 100px;
+  margin: 10px auto 30px;
+  border-radius: 100%;
+  border: 2px solid #aaa;
+  background-size: cover;
 }
 
-.formBox input{
-    width: 93%;
-    padding: 10px;
-    text-align: center;
-    height:40px;
-    border: 1px solid #ccc;;
-    background: #fafafa;
-    transition:0.2s ease-in-out;
-
-}
-
-.btnLogin {
-    width: 100%;
-    padding: 10px;
-    text-align: center;
-    height:40px;
-    border: 1px solid #ccc;;
-    background: #fafafa;
-    transition:0.2s ease-in-out;
-    border-radius: 5px;
-    margin-top: 10px;
+.formBox input {
+  width: 93%;
+  padding: 10px;
+  text-align: center;
+  height: 40px;
+  border: 1px solid #ccc;
+  background: #fafafa;
+  transition: 0.2s ease-in-out;
 }
 
 .btnLogin {
-    width: 100%;
-    padding: 10px;
-    text-align: center;
-    height:40px;
-    border: 1px solid #ccc;;
-    background: #fafafa;
-    transition:0.2s ease-in-out;
-    border-radius: 5px;
-    margin-top: 10px;
-    cursor: pointer; 
-
-    &:hover{ 
-        outline: 0;
-        background: #eee;
-        animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
-        transform: translate3d(0, 0, 0);
-        backface-visibility: hidden;
-        perspective: 1000px;
-    }
-
-    &:focus {
-        outline: 0;
-    }
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  height: 40px;
+  border: 1px solid #ccc;
+  background: #fafafa;
+  transition: 0.2s ease-in-out;
+  border-radius: 5px;
+  margin-top: 10px;
 }
-  
+
+.btnLogin {
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  height: 40px;
+  border: 1px solid #ccc;
+  background: #fafafa;
+  transition: 0.2s ease-in-out;
+  border-radius: 5px;
+  margin-top: 10px;
+  cursor: pointer;
+
+  &:hover {
+    outline: 0;
+    background: #eee;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+.wrongPassword {
+  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+
   @keyframes shake {
-    10%, 90% {
+    10%,
+    90% {
       transform: translate3d(-1px, 0, 0);
     }
-    
-    20%, 80% {
+
+    20%,
+    80% {
       transform: translate3d(2px, 0, 0);
     }
-  
-    30%, 50%, 70% {
+
+    30%,
+    50%,
+    70% {
       transform: translate3d(-4px, 0, 0);
     }
-  
-    40%, 60% {
+
+    40%,
+    60% {
       transform: translate3d(4px, 0, 0);
     }
   }
-
-.forgotPassword { 
-    margin-top: 10px;
-    font-size:10px;
-    cursor: pointer;
 }
 
-.formBox input:focus{
-    outline: 0;
-    background: #eee;
+.forgotPassword {
+  margin-top: 10px;
+  font-size: 10px;
+  cursor: pointer;
 }
 
-.formBox input[type="text"]{
-    border-radius: 5px 5px 0 0;
-    text-transform: lowercase;
+.formBox input:focus {
+  outline: 0;
+  background: #eee;
 }
 
-.formBox input[type="password"]{
-    border-radius: 0 0 5px 5px;
-    border-top: 0;
+.formBox input[type="text"] {
+  border-radius: 5px 5px 0 0;
+  text-transform: lowercase;
 }
 
-.formBox button.login{
-    margin-top:15px;
-    padding: 10px 20px;
+.formBox input[type="password"] {
+  border-radius: 0 0 5px 5px;
+  border-top: 0;
+}
+
+.formBox button.login {
+  margin-top: 15px;
+  padding: 10px 20px;
 }
