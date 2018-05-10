@@ -9,9 +9,11 @@ const LoginPage = props => {
         <div id={Classes.output} />
         <img src={logo} alt="Logo" className={Classes.avatar}/>
         <div className={Classes.formBox}>
-          <input name="user" type="text" placeholder="username" />
-          <input type="password" placeholder="password" />
-          <button className={Classes.btnLogin}>Login</button>
+          <input type="text" placeholder="username" onChange={props.name}/>
+          <input type="password" placeholder="password" onChange={props.password}/>
+          <button className={Classes.btnLogin} onClick={props.login}>
+          Login
+          </button>
           <p className={Classes.forgotPassword}>
             If You forgot Your Password, Click here
           </p>
