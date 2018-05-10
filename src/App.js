@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import LoginContainer from './Containers/Login/LoginContainer';
-import Class from './App.scss'
+import Classes from './App.scss'
 
 class App extends Component {
   render() {
