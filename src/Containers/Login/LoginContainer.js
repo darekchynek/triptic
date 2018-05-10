@@ -3,9 +3,11 @@ import LoginPage from './components/LoginPage/LoginPage';
 import Footer from './components/Footer/Footer';
 import Classes from './LoginContainer.scss';
 import LoginTitle from './components/LoginTitle/LoginTitle';
+import { connect } from 'react-redux';
+import * as actions from '../../Store/Actions/index';
 
 class LoginContainer extends Component {
-  
+
   nameHandler = (event) => {
     console.log(event.target.value);
   }
@@ -29,4 +31,8 @@ class LoginContainer extends Component {
   }
 }
 
-export default LoginContainer;
+const mapDispatchToProps = dispatch => ({
+  onSignIn: (login, password) => dispatch(actions.signIn(login, password))
+});
+
+export default connect(null, mapDispatchToProps)(LoginContainer);
