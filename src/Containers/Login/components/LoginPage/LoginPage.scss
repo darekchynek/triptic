@@ -6,11 +6,12 @@
 .loginContainer {
   position: relative;
   width: 300px;
-  margin: 80px auto;
+  margin: 60px auto;
   padding: 20px 40px 40px;
   text-align: center;
   background: #fff;
   border: 1px solid #ccc;
+  opacity: 1;
 }
 
 #output {
@@ -62,18 +63,7 @@
   border: 1px solid #ccc;
   background: #fafafa;
   transition: 0.2s ease-in-out;
-}
-
-.btnLogin {
-  width: 100%;
-  padding: 10px;
-  text-align: center;
-  height: 40px;
-  border: 1px solid #ccc;
-  background: #fafafa;
-  transition: 0.2s ease-in-out;
-  border-radius: 5px;
-  margin-top: 10px;
+  opacity: 1;
 }
 
 .btnLogin {
@@ -87,6 +77,7 @@
   border-radius: 5px;
   margin-top: 10px;
   cursor: pointer;
+  opacity: 1;
 
   &:hover {
     outline: 0;

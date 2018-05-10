@@ -1,3 +1,15 @@
 .position { 
     text-align: center;
+    position: fixed;
+    left: 37%;
+    top: 95%;
+}
+
+.paragraph {
+    font-size: 10px;
+    display: inline-block;
+    margin-right: 15px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    color: white;
 }
