@@ -23,6 +23,7 @@ class LoginContainer extends Component {
   render() {
     return (
       <div>
+        <div className={Classes.backgroundImage}></div>
         <LoginTitle></LoginTitle>
         <LoginPage login={this.loginHandler} name={this.nameHandler} password={this.passwordHandler}></LoginPage>
         <LoginFooter></LoginFooter>
