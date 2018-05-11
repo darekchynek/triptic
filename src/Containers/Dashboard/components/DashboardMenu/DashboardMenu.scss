@@ -1,6 +1,4 @@
-.menuBox {
-    box-shadow: 1px 1px 3px 0px rgba(0,0,0,0.55);
-}
+@import '../../../../var.scss';
 
 .menuContainer {
   position: relative;
@@ -25,7 +23,7 @@
   margin-right: auto;
 
   &:hover {
-    border-bottom: 1px solid grey;
+    border-bottom: 1px solid $mainColor;
   }
 }
 

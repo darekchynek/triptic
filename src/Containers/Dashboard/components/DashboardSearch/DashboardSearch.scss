@@ -1,3 +1,5 @@
+@import '../../../../var.scss';
+
 .iconSearch {
     font-size: 34px;
     display: inline-block;
@@ -8,6 +10,6 @@
     padding-right: 10px;
     
     &:hover {
-        border-bottom: 1px solid grey;
+        border-bottom: 1px solid $mainColor;
       }
 }
