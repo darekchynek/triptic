@@ -8,7 +8,7 @@ const LoginPage = props => {
       <div className={Classes.loginContainer}>
         <div id={Classes.output} />
         <div className={Classes.avatar}>
-        <i class="fas fa-car"></i>
+        <i className="fas fa-car"></i>
         </div>
         <div className={Classes.formBox}>
           <input type="text" placeholder="username" onChange={props.name}/>
