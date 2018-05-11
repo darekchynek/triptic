@@ -1,7 +1,7 @@
 import React from 'react';
-import Classes from './Footer.scss';
+import Classes from './LoginFooter.scss';
 
-const Footer = props => {
+const LoginFooter = props => {
     return (
         <div className={Classes.position}>
             <p className={Classes.paragraph}>Contact</p>
@@ -12,4 +12,4 @@ const Footer = props => {
       );
 }
 
-export default Footer;
+export default LoginFooter;

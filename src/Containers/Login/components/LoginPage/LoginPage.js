@@ -12,7 +12,7 @@ const LoginPage = props => {
           <input type="text" placeholder="username" onChange={props.name}/>
           <input type="password" placeholder="password" onChange={props.password}/>
           <button className={Classes.btnLogin} onClick={props.login}>
-          Login
+            Login
           </button>
           <p className={Classes.forgotPassword}>
             If You forgot Your Password, Click here

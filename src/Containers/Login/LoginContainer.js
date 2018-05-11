@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import LoginPage from './components/LoginPage/LoginPage';
-import Footer from './components/Footer/Footer';
+import LoginFooter from './components/LoginFooter/LoginFooter';
 import Classes from './LoginContainer.scss';
 import LoginTitle from './components/LoginTitle/LoginTitle';
 import { connect } from 'react-redux';
@@ -25,7 +25,7 @@ class LoginContainer extends Component {
       <div>
         <LoginTitle></LoginTitle>
         <LoginPage login={this.loginHandler} name={this.nameHandler} password={this.passwordHandler}></LoginPage>
-        <Footer></Footer>
+        <LoginFooter></LoginFooter>
       </div>
     );
   }
