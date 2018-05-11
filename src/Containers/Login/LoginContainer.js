@@ -16,8 +16,8 @@ class LoginContainer extends Component {
     console.log(event.target.value);
   }
 
-  loginHandler = () => {
-    console.log('Login')
+  signInHandler = ({ email, password }) => {
+    this.props.onSignIn(email, password);
   }
 
   render() {
@@ -25,7 +25,7 @@ class LoginContainer extends Component {
       <div>
         <div className={Classes.backgroundImage}></div>
         <LoginTitle></LoginTitle>
-        <LoginPage login={this.loginHandler} name={this.nameHandler} password={this.passwordHandler}></LoginPage>
+        <LoginPage onSignIn={this.signInHandler} name={this.nameHandler} password={this.passwordHandler}></LoginPage>
         <LoginFooter></LoginFooter>
       </div>
     );

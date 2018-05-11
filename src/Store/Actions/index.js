@@ -1,4 +1,5 @@
 export {
     signIn,
-    startSignIn
+    startSignIn,
+    signInSucceded
 } from './auth';
