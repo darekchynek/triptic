@@ -3,7 +3,9 @@ import Classes from './DashboardSearch.scss';
 
 const DashboardSearch = props => {
     return (
-        <div></div>
+        <div className={Classes.iconSearch}>
+        <i className="fas fa-search"></i>
+        </div>
     );
 }
 

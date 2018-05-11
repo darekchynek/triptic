@@ -1,0 +1,58 @@
+.menuBox {
+    box-shadow: 1px 1px 3px 0px rgba(0,0,0,0.55);
+}
+
+.menuContainer {
+  position: relative;
+  width: 100%;
+  height: 60px;
+  text-align: center;
+  background: #fff;
+  border: 1px solid #ccc;
+  opacity: 1;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(5, 1fr);
+  font-size: 30px;
+  line-height: 60px;
+  text-align: center;
+}
+
+.menuItems {
+  cursor: pointer;
+  width: 100px;
+  margin-left: auto;
+  margin-right: auto;
+
+  &:hover {
+    border-bottom: 1px solid grey;
+  }
+}
+
+#output {
+  position: absolute;
+  width: 300px;
+  top: -75px;
+  left: 0;
+  color: #fff;
+}
+
+.menuContainer::before,
+.menuContainer::after {
+  content: "";
+  position: absolute;
+  width: 1280px;
+  height: 100%;
+  top: 3.5px;
+  left: 0;
+  background: #fff;
+  z-index: -1;
+  transform: rotateZ(1deg);
+  opacity: 0.3;
+}
+
+.menuContainer::after {
+  top: 5px;
+  z-index: -2;
+  transform: rotateZ(-1deg);
+}

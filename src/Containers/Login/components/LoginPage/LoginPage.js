@@ -7,7 +7,9 @@ const LoginPage = props => {
     <div className={Classes.container}>
       <div className={Classes.loginContainer}>
         <div id={Classes.output} />
-        <img src={logo} alt="Logo" className={Classes.avatar}/>
+        <div className={Classes.avatar}>
+        <i class="fas fa-car"></i>
+        </div>
         <div className={Classes.formBox}>
           <input type="text" placeholder="username" onChange={props.name}/>
           <input type="password" placeholder="password" onChange={props.password}/>

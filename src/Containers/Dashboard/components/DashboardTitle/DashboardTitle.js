@@ -4,8 +4,7 @@ import logo from '../../../../assets/driver-logo.png';
 
 const DashboardTitle = props => {
     return (
-        <div>
-            <img src={logo} alt="Logo" className={Classes.mainAvatar}/>
+        <div className={Classes.titleContainer}>
             <div className={Classes.mainTitle}>Triptic</div>
         </div>
       );

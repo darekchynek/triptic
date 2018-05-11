@@ -1,3 +1,5 @@
+@import "../../../../var.scss";
+
 .title {
   text-align: center;
   font-size: 30px;
@@ -9,7 +11,7 @@
   margin: 60px auto;
   padding: 20px 40px 40px;
   text-align: center;
-  background: #fff;
+  background: $containerBackground;
   border: 1px solid #ccc;
   opacity: 1;
 }
@@ -30,20 +32,16 @@
   height: 100%;
   top: 3.5px;
   left: 0;
-  background: #fff;
+  background: $containerBackground;
   z-index: -1;
-  -webkit-transform: rotateZ(3deg);
-  -moz-transform: rotateZ(3deg);
-  -ms-transform: rotateZ(3deg);
+  transform: rotateZ(3deg);
   opacity: 0.3;
 }
 
 .loginContainer::after {
   top: 5px;
   z-index: -2;
-  -webkit-transform: rotateZ(-6deg);
-  -moz-transform: rotateZ(-6deg);
-  -ms-transform: rotateZ(-6deg);
+  transform: rotateZ(-6deg);
 }
 
 .avatar {
@@ -51,8 +49,11 @@
   height: 100px;
   margin: 10px auto 30px;
   border-radius: 100%;
-  border: 2px solid #aaa;
+  border: 2px solid $mainColorDark;
   background-size: cover;
+  line-height: 103px;
+  font-size: 80px;
+  color: $mainColorDark;
 }
 
 .formBox input {
@@ -60,8 +61,8 @@
   padding: 10px;
   text-align: center;
   height: 40px;
-  border: 1px solid #ccc;
-  background: #fafafa;
+  border: 1px solid $mainColorDark;
+  background: $inputFields;
   transition: 0.2s ease-in-out;
   opacity: 1;
 }
@@ -71,8 +72,8 @@
   padding: 10px;
   text-align: center;
   height: 40px;
-  border: 1px solid #ccc;
-  background: #fafafa;
+  border: 1px solid $mainColorDark;
+  background: $inputFields;
   transition: 0.2s ease-in-out;
   border-radius: 5px;
   margin-top: 10px;
@@ -81,7 +82,8 @@
 
   &:hover {
     outline: 0;
-    background: #eee;
+    background: $mainColorDark;
+    color: white;
   }
 
   &:focus {
@@ -127,7 +129,7 @@
 
 .formBox input:focus {
   outline: 0;
-  background: #eee;
+  background: lighten($mainColorPurple, 30%);
 }
 
 .formBox input[type="text"] {

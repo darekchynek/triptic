@@ -11,7 +11,7 @@ class DashboardContainer extends Component {
 
   render() {
     return (
-      <div>
+      <div className={Classes.container}>
         <DashboardTitle></DashboardTitle>
         <DashboardMenu></DashboardMenu>
         <DashboardPage></DashboardPage>

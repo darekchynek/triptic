@@ -1,0 +1,13 @@
+.iconSearch {
+    font-size: 34px;
+    display: inline-block;
+    width: 60px;
+    cursor: pointer;
+    grid-column: 5;
+    margin-left: auto;
+    padding-right: 10px;
+    
+    &:hover {
+        border-bottom: 1px solid grey;
+      }
+}
