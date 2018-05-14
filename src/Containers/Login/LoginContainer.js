@@ -1,23 +1,21 @@
 import React, { Component } from 'react';
+import { Route, Link, withRouter } from 'react-router-dom';
 import LoginPage from './components/LoginPage/LoginPage';
 import LoginFooter from './components/LoginFooter/LoginFooter';
 import Classes from './LoginContainer.scss';
 import LoginTitle from './components/LoginTitle/LoginTitle';
+import Signup from './components/SignUp/Signup';
 import { connect } from 'react-redux';
 import * as actions from '../../Store/Actions/index';
 
 class LoginContainer extends Component {
 
-  nameHandler = (event) => {
-    console.log(event.target.value);
-  }
-
-  passwordHandler = (event) => {
-    console.log(event.target.value);
-  }
-
   signInHandler = ({ email, password }) => {
     this.props.onSignIn(email, password);
+  }
+
+  signUpHandler = (values) => {
+    console.log(values);
   }
 
   render() {
@@ -25,7 +23,9 @@ class LoginContainer extends Component {
       <div>
         <div className={Classes.backgroundImage}></div>
         <LoginTitle></LoginTitle>
-        <LoginPage onSignIn={this.signInHandler} name={this.nameHandler} password={this.passwordHandler}></LoginPage>
+        <Link to='/signup'>Go to sign up</Link>
+        <Route component={LoginPage} onSignIn={this.signInHandler} />
+        <Route path='/signup' component={Signup} onSignUp={this.signUpHandler} />
         <LoginFooter></LoginFooter>
       </div>
     );
@@ -36,4 +36,4 @@ const mapDispatchToProps = dispatch => ({
   onSignIn: (login, password) => dispatch(actions.signIn(login, password))
 });
 
-export default connect(null, mapDispatchToProps)(LoginContainer);
+export default withRouter(connect(null, mapDispatchToProps)(LoginContainer));

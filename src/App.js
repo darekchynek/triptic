@@ -1,9 +1,5 @@
 import React, { Component } from 'react';
-import { 
-  BrowserRouter as Router, 
-  Route,
-  Link
-} from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import LoginContainer from './Containers/Login/LoginContainer';
 import DashboardContainer from './Containers/Dashboard/DashboardContainer';
 import Classes from './App.scss'
@@ -13,8 +9,8 @@ class App extends Component {
     return (
       <Router>
         <div>
-        <Route exact path="/" component={LoginContainer}></Route>
-        <Route path="/Dashboard" component={DashboardContainer}></Route>
+          <Route exact path="/" component={LoginContainer} />
+          <Route path="/dashboard" component={DashboardContainer} />
         </div>
       </Router>
     );

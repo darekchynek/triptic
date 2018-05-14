@@ -3,17 +3,17 @@ import Classes from "./LoginPage.scss";
 import Yup from 'yup';
 import { Field, Form, Formik } from 'formik';
 
-const LoginPage = ({ onSignIn }) => {
+const LoginPage = props => {
   return (
     <div className={Classes.container}>
       <div className={Classes.loginContainer}>
         <div id={Classes.output} />
         <div className={Classes.avatar}>
-        <i className="fas fa-car"></i>
+          <i className="fas fa-car"></i>
         </div>
         <Formik
           initialValues={{ email: '', password: '' }}
-          onSubmit={values => onSignIn(values)}
+          onSubmit={values => props.route.onSignIn(values)}
           validationSchema={validationSchema}
           render={({ errors, touched, isSubmitting, isValid }) => (
             <Form className={Classes.formBox}>
