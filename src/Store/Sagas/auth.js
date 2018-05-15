@@ -1,6 +1,5 @@
 import * as actions from '../Actions/index';
 import axios from 'axios';
-import baseAxios from '../../http/axios';
 import { put } from 'redux-saga/effects';
 import { SIGNIN_URL, SIGNUP_URL } from '../../http/url';
 
@@ -20,15 +19,12 @@ export function* authUserSaga(action) {
 }
 
 export function* signupUserSaga(action) {
-    yield put(actions.startSignUp());
-    const { email, password, firstName, lastName, telephone, address } = action.signupData;
+    yield put(action.startSignUp());
+    const signupData = action.signupData;
     try {
-        const { data } = yield axios.post(SIGNUP_URL, { email, password, returnSecureToken: true });
-        const additionalInfo = { firstName, lastName, telephone, address, userId: data.localId };
-        yield baseAxios.post('/users.json?auth=' + data.idToken, additionalInfo);
-        yield put(actions.signInSucceded(data.idToken, data.localId));
+        const response = yield axios.post(SIGNUP_URL, { email: signupData.email, password: signupData.password, returnSecureToken: true });
+        yield put(actions.signInSucceded(response.data.idToken, response.data.localId)); 
         yield put(actions.signUpSucceded())
     } catch (err) {
-        console.log(err);
     }
 }

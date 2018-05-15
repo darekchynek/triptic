@@ -39,24 +39,6 @@ const authReducer = (state = initialState, action) => {
                 token: null
             }
         }
-        case actionTypes.START_SIGNUP: {
-            return {
-                ...state,
-                loading: true
-            }
-        }
-        case actionTypes.SIGNUP_FAILED: {
-            return {
-                ...state,
-                loading: false
-            }
-        }
-        case actionTypes.SIGNUP_SUCCEDED: {
-            return {
-                ...state,
-                loading: false
-            }
-        }
         default: {
             return state;
         }
