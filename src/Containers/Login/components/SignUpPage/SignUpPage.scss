@@ -15,11 +15,6 @@
     opacity: 1;
 }
 
-.fieldBox {
-    margin: 20px;
-    width: 260px;
-}
-
 #output {
     position: absolute;
     width: 300px;
@@ -125,25 +120,59 @@
     cursor: pointer;
 }
 
-.formBox1 input:focus {
+.fieldBox1 {
+    margin: 20px;
+    width: 260px;
+}
+
+.fieldBox1 input:focus {
     outline: 0;
     background: lighten($mainColorPurple, 30%);
 }
 
-.formBox1 input:first-child {
+.fieldBox1 input:first-child {
     border-radius: 5px 5px 0 0;
     text-transform: lowercase;
 }
 
-.formBox1 input:last-child {
+.fieldBox1 input:nth-child(2) {
+    border-top: 0;
+    text-transform: lowercase;
+}
+
+.fieldBox1 input:last-child {
     border-radius: 0 0 5px 5px;
     border-top: 0;
 }
 
-.formBox button.login {
-    text-align: center;
-    margin-top: 15px;
-    padding: 10px 20px;
+.fieldBox2 {
+    margin: 20px;
+    width: 260px;
+}
+
+.fieldBox2 input:focus {
+    outline: 0;
+    background: lighten($mainColorPurple, 30%);
+}
+
+.fieldBox2 input:first-child {
+    border-radius: 5px 5px 0 0;
+    text-transform: lowercase;
+}
+
+.fieldBox2 input:nth-child(2) {
+    border-top: 0;
+    text-transform: lowercase;
+}
+
+.fieldBox2 input:nth-child(3) {
+    border-top: 0;
+    text-transform: lowercase;
+}
+
+.fieldBox2 input:last-child {
+    border-radius: 0 0 5px 5px;
+    border-top: 0;
 }
 
 .formBox {

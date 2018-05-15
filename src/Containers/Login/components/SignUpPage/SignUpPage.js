@@ -18,27 +18,29 @@ const SignUpPage = props => (
                 render={({ errors, touched, isSubmitting, isValid }) => (
                     <Form>
                         <div className={Classes.formBox}>
-                        <div className={Classes.fieldBox}>
-                        <Field className="input" type="text" name="email" placeholder="Email" />
-                                {touched.email}
-                        <Field className="input" type="password" name="password" placeholder="Password" />
-                                {touched.password}
-                        <Field className="input" type="password" name="repeatPassword" placeholder="Repeat password" />
-                                {touched.repeatPassword}
-                        <p>Address: </p>
-                        <Field className="input" type="text" name="firstName" placeholder="First name" />
-                                {touched.firstName}
-                        <Field className="input" type="text" name="secondName" placeholder="Second name" />
-                                {touched.secondName}
-                        <Field className="input" type="text" name="telephone" placeholder="Telephone number" />
-                                {touched.telephone}
-                        <Field className="input" type="text" name="address" placeholder="Address" />
-                                {touched.address}
+                        <div>
+                            <div className={Classes.fieldBox1}>
+                                <Field className="input" type="text" name="email" placeholder="Email" />
+                                        {touched.email}
+                                <Field className="input" type="password" name="password" placeholder="Password" />
+                                        {touched.password}
+                                <Field className="input" type="password" name="repeatPassword" placeholder="Repeat password" />
+                                        {touched.repeatPassword}
+                            </div>
+                            <div className={Classes.fieldBox2}>
+                                <Field className="input" type="text" name="firstName" placeholder="First name" />
+                                        {touched.firstName}
+                                <Field className="input" type="text" name="secondName" placeholder="Second name" />
+                                        {touched.secondName}
+                                <Field className="input" type="text" name="telephone" placeholder="Telephone number" />
+                                        {touched.telephone}
+                                <Field className="input" type="text" name="address" placeholder="Address" />
+                                        {touched.address}
+                            </div>
                         </div>
-                        <div className={Classes.fieldBox}>
-
+                        <div>
+                            <p>Here we put validation of register data</p>
                         </div>
-                        
                         </div>
                         <button type='submit' className={Classes.submit} disabled={isSubmitting || !isValid}>Submit</button>
                     </Form>
