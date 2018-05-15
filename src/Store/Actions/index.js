@@ -4,5 +4,8 @@ export {
     signInSucceded,
     startSignUp,
     signUp,
-    signUpSucceded
+    signUpSucceded,
+    forgotPass,
+    startForgotPass,
+    forgotPassSucceced
 } from './auth';

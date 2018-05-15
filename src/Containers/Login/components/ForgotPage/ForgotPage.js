@@ -14,7 +14,7 @@ const ForgotPage = props => {
         </div>
         <Formik
           initialValues={{ email: ''}}
-          onSubmit={values => props.route.onSignIn(values)}
+          onSubmit={values => props.route.onForgotPass(values)}
           validationSchema={validationSchema}
           render={({ errors, touched, isSubmitting, isValid }) => (
             <Form className={Classes.formBox}>

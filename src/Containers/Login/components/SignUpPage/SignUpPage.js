@@ -21,7 +21,6 @@ const SignUpPage = props => (
                         <div>
                             <div className={Classes.fieldBox1}>
                                 <Field className="input" type="text" name="email" placeholder="Email" />
-                                        {touched.email}
                                 <Field className="input" type="password" name="password" placeholder="Password" />
                                         {touched.password}
                                 <Field className="input" type="password" name="repeatPassword" placeholder="Repeat password" />
@@ -39,7 +38,7 @@ const SignUpPage = props => (
                             </div>
                         </div>
                         <div>
-                            <p>Here we put validation of register data</p>
+                            <p>{touched.email && <p>{errors.email}</p>}</p>
                         </div>
                         </div>
                         <button type='submit' className={Classes.submit} disabled={isSubmitting || !isValid}>Submit</button>
