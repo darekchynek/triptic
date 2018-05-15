@@ -13,7 +13,7 @@ const SignUpPage = props => (
             </div>
             <Formik
                 initialValues={{ email: '', password: '', repeatPassword: '', firstName: '', lastName: '', telephone: '', address: '' }}
-                onSubmit={values => { console.log(props); props.onSignUp(values); }}
+                onSubmit={values => props.onSignUp(values)}
                 validationSchema={validationSchema}
                 render={({ errors, touched, isSubmitting, isValid }) => (
                     <Form>

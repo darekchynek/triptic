@@ -1,7 +1,13 @@
 import * as actionTypes from '../Actions/actionTypes';
 
+const initialState = {
+    error: null,
+    loading: null,
+    kind: null,
+    email: null
+}
 
-const forgotReducer = (state, action) => {
+const forgotReducer = (state = initialState, action) => {
     switch (action.type) {
         case actionTypes.START_FORGOT_PASS: {
             return {
@@ -29,8 +35,7 @@ const forgotReducer = (state, action) => {
         case actionTypes.FORGOT_PASS: {
             return {
                 ...state,
-                email: null,
-                token: null
+                email: null
             }
         }
         default: {

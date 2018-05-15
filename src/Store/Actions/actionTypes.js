@@ -1,15 +1,15 @@
-export const START_SIGNIN = 'START_SIGNIN';
 export const SIGNIN_SUCCEDED = 'SIGNIN_SUCCEDED';
-export const SIGNIN_FAILED = 'SIGNIN_FAILED';
 export const SIGNIN = 'SIGNIN';
 export const LOGOUT = 'LOGOUT';
 
-export const START_SIGNUP = 'START_SIGNUP';
-export const SIGNUP_SUCCEDED = 'SIGNUP_SUCCEDED';
-export const SIGNUP_FAILED = 'SIGNUP_FAILED';
 export const SIGNUP = 'SIGNUP';
 
 export const START_FORGOT_PASS = 'START_FORGOT_PASS';
 export const FORGOT_PASS_SUCCEDED = 'FORGOT_PASS_SUCCEDED';
 export const FORGOT_PASS_FAILED = 'FORGOT_PASS_FAILED';
 export const FORGOT_PASS = 'FORGOT_PASS';
+
+export const ENABLE_LOADING = 'ENABLE_LOADING';
+export const DISABLE_LOADING = 'DISABLE_LOADING';
+export const SET_ERROR = 'SET_ERROR';
+export const REMOVE_ERROR = 'REMOVE_ERROR';
