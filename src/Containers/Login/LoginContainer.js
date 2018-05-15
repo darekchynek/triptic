@@ -19,8 +19,8 @@ class LoginContainer extends Component {
     this.props.onSignIn(email, password);
   }
 
-  signUpHandler = (values) => {
-    console.log(values);
+  signUpHandler = values => {
+    this.props.onSignUp(values);
   }
 
   render() {
@@ -28,13 +28,13 @@ class LoginContainer extends Component {
       <div>
         <div className={Classes.backgroundImage}></div>
         <LoginTitle></LoginTitle>
-          <Route exact path='/' component={LoginPage} onSignIn={this.signInHandler}></Route>
-          <Route path='/signup' component={SignUpPage} onSignUp={this.signUpHandler}></Route>
-          <Route path='/forgot-password' component={ForgotPage}></Route>
-          <Route path='/contact' component={ContactPage}></Route>
-          <Route path='/about' component={AboutPage}></Route>
-          <Route path='/development' component={DevelopersPage}></Route>
-          <Route path='/privacy-policy' component={PrivacyPolicyPage}></Route>
+        <Route exact path='/' render={() => <LoginPage onSignIn={this.signInHandler} />} />
+        <Route path='/signup' render={() => <SignUpPage onSignUp={this.signUpHandler} />} />
+        <Route path='/forgot-password' component={ForgotPage}></Route>
+        <Route path='/contact' component={ContactPage}></Route>
+        <Route path='/about' component={AboutPage}></Route>
+        <Route path='/development' component={DevelopersPage}></Route>
+        <Route path='/privacy-policy' component={PrivacyPolicyPage}></Route>
         <LoginFooter></LoginFooter>
       </div>
     );
@@ -42,7 +42,8 @@ class LoginContainer extends Component {
 }
 
 const mapDispatchToProps = dispatch => ({
-  onSignIn: (login, password) => dispatch(actions.signIn(login, password))
+  onSignIn: (login, password) => dispatch(actions.signIn(login, password)),
+  onSignUp: values => dispatch(actions.signUp(values))
 });
 
 export default withRouter(connect(null, mapDispatchToProps)(LoginContainer));
