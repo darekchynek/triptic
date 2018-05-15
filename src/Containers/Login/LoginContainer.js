@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route, Link, withRouter } from 'react-router-dom';
+import { Route, Link, withRouter, Switch } from 'react-router-dom';
 import LoginPage from './components/LoginPage/LoginPage';
 import LoginFooter from './components/LoginFooter/LoginFooter';
 import Classes from './LoginContainer.scss';
@@ -24,8 +24,8 @@ class LoginContainer extends Component {
         <div className={Classes.backgroundImage}></div>
         <LoginTitle></LoginTitle>
         <Link to='/signup'>Go to sign up</Link>
-        <Route component={LoginPage} onSignIn={this.signInHandler} />
-        <Route path='/signup' component={Signup} onSignUp={this.signUpHandler} />
+          <Route exact path='/' component={LoginPage} onSignIn={this.signInHandler}></Route>
+          <Route path='/signup' component={Signup} onSignUp={this.signUpHandler}></Route>
         <LoginFooter></LoginFooter>
       </div>
     );
