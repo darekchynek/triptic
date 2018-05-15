@@ -21,6 +21,14 @@ class LoginContainer extends Component {
     this.props.onSignIn(email, password);
   }
 
+  forgotPassHandler = (email) => {
+    this.props.onForgotPass(email);
+  }
+
+  signUpHandler = (values) => {
+    console.log(values);
+  }
+
   signUpHandler = values => {
     this.props.onSignUp(values);
   }
@@ -35,7 +43,7 @@ class LoginContainer extends Component {
           <LoginTitle></LoginTitle>
           <Route exact path='/' render={() => <LoginPage onSignIn={this.signInHandler} />} />
           <Route path='/signup' render={() => <SignUpPage onSignUp={this.signUpHandler} />} />
-          <Route path='/forgot-password' component={ForgotPage}></Route>
+          <Route path='/forgot-password' render={() => <ForgotPage onForgotPass={this.forgotPassHandler}></ForgotPage>} />
           <Route path='/contact' component={ContactPage}></Route>
           <Route path='/about' component={AboutPage}></Route>
           <Route path='/development' component={DevelopersPage}></Route>
@@ -49,6 +57,7 @@ class LoginContainer extends Component {
 
 const mapDispatchToProps = dispatch => ({
   onSignIn: (login, password) => dispatch(actions.signIn(login, password)),
+  onForgotPass: (email) => dispatch(actions.forgotPass(email)),
   onSignUp: values => dispatch(actions.signUp(values))
 });
 
