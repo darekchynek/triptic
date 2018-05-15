@@ -4,8 +4,11 @@ export {
     signInSucceded,
     startSignUp,
     signUp,
-    signUpSucceded,
+    signUpSucceded
+    
+} from './auth';
+export {
     forgotPass,
     startForgotPass,
     forgotPassSucceced
-} from './auth';
+} from './forgot';

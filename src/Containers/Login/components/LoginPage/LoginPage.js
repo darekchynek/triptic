@@ -14,7 +14,7 @@ const LoginPage = props => {
         </div>
         <Formik
           initialValues={{ email: '', password: '' }}
-          onSubmit={values => props.route.onSignIn(values)}
+          onSubmit={values => props.onSignIn(values)}
           validationSchema={validationSchema}
           render={({ errors, touched, isSubmitting, isValid }) => (
             <Form className={Classes.formBox}>

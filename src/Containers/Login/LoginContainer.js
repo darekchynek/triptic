@@ -26,7 +26,7 @@ class LoginContainer extends Component {
   signUpHandler = (values) => {
     console.log(values);
   }
-    
+
   signUpHandler = values => {
     this.props.onSignUp(values);
   }
@@ -38,7 +38,7 @@ class LoginContainer extends Component {
         <LoginTitle></LoginTitle>
         <Route exact path='/' render={() => <LoginPage onSignIn={this.signInHandler} />} />
         <Route path='/signup' render={() => <SignUpPage onSignUp={this.signUpHandler} />} />
-        <Route path='/forgot-password' component={ForgotPage}></Route>
+        <Route path='/forgot-password' render={() => <ForgotPage onForgotPass={this.forgotPassHandler}></ForgotPage>} />
         <Route path='/contact' component={ContactPage}></Route>
         <Route path='/about' component={AboutPage}></Route>
         <Route path='/development' component={DevelopersPage}></Route>

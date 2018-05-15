@@ -4,7 +4,7 @@ import { put } from 'redux-saga/effects';
 import { FORGOT_PASS_LINK } from '../../http/url';
 
 export function* forgotPassSaga(action) {
-    yield put(action.startForgotPass());
+    yield put(actions.startForgotPass());
     const forgotPassData = action.forgotPassData;
     try {
         const response = yield axios.post(FORGOT_PASS_LINK, { requestType: "PASSWORD_RESET", email: forgotPassData.email });
