@@ -16,13 +16,16 @@ const SignUpPage = props => (
                 onSubmit={values => props.route.onSignUp(values)}
                 validationSchema={validationSchema}
                 render={({ errors, touched, isSubmitting, isValid }) => (
-                    <Form className={Classes.formBox}>
+                    <Form>
+                        <div className={Classes.formBox}>
+                        <div className={Classes.fieldBox}>
                         <Field className="input" type="text" name="email" placeholder="Email" />
                                 {touched.email}
                         <Field className="input" type="password" name="password" placeholder="Password" />
                                 {touched.password}
                         <Field className="input" type="password" name="repeatPassword" placeholder="Repeat password" />
                                 {touched.repeatPassword}
+                        <p>Address: </p>
                         <Field className="input" type="text" name="firstName" placeholder="First name" />
                                 {touched.firstName}
                         <Field className="input" type="text" name="secondName" placeholder="Second name" />
@@ -31,11 +34,17 @@ const SignUpPage = props => (
                                 {touched.telephone}
                         <Field className="input" type="text" name="address" placeholder="Address" />
                                 {touched.address}
+                        </div>
+                        <div className={Classes.fieldBox}>
+
+                        </div>
+                        
+                        </div>
                         <button type='submit' className={Classes.submit} disabled={isSubmitting || !isValid}>Submit</button>
                     </Form>
                 )}
             />
-            <Link to='/'>Back to login page</Link>
+            <Link to='/'><p className={Classes.link}>Back to login page</p></Link>
         </div>
     </div>
 )

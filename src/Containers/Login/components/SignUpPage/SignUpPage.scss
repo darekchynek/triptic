@@ -6,13 +6,18 @@
 
 .signupContainer {
     position: relative;
-    width: 300px;
+    width: 600px;
     margin: 60px auto;
     padding: 20px 40px 40px;
     text-align: center;
     background: $containerBackground;
     border: 1px solid #ccc;
     opacity: 1;
+}
+
+.fieldBox {
+    margin: 20px;
+    width: 260px;
 }
 
 #output {
@@ -67,7 +72,7 @@
 }
 
 .submit {
-    width: 100%;
+    width: 40%;
     padding: 10px;
     text-align: center;
     height: 40px;
@@ -120,22 +125,33 @@
     cursor: pointer;
 }
 
-.formBox input:focus {
+.formBox1 input:focus {
     outline: 0;
     background: lighten($mainColorPurple, 30%);
 }
 
-.formBox input[type="text"] {
+.formBox1 input:first-child {
     border-radius: 5px 5px 0 0;
     text-transform: lowercase;
 }
 
-.formBox input[type="password"] {
+.formBox1 input:last-child {
     border-radius: 0 0 5px 5px;
     border-top: 0;
 }
 
 .formBox button.login {
+    text-align: center;
     margin-top: 15px;
     padding: 10px 20px;
+}
+
+.formBox {
+    display: grid;
+    grid-template-columns: 50% 40%;
+    justify-content: space-around
+}
+
+.link {
+    margin-top: 20px;
 }
