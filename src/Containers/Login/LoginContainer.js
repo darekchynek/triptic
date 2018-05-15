@@ -8,6 +8,10 @@ import SignUpPage from './components/SignUpPage/SignUpPage';
 import { connect } from 'react-redux';
 import * as actions from '../../Store/Actions/index';
 import ForgotPage from './components/ForgotPage/ForgotPage';
+import ContactPage from './components/ContactPage/ContactPage';
+import AboutPage from './components/AboutPage/AboutPage';
+import DevelopersPage from './components/DevelopersPage/DevelopersPage';
+import PrivacyPolicyPage from './components/PrivacyPolicyPage/PrivacyPolicyPage';
 
 class LoginContainer extends Component {
 
@@ -27,6 +31,10 @@ class LoginContainer extends Component {
           <Route exact path='/' component={LoginPage} onSignIn={this.signInHandler}></Route>
           <Route path='/signup' component={SignUpPage} onSignUp={this.signUpHandler}></Route>
           <Route path='/forgot-password' component={ForgotPage}></Route>
+          <Route path='/contact' component={ContactPage}></Route>
+          <Route path='/about' component={AboutPage}></Route>
+          <Route path='/development' component={DevelopersPage}></Route>
+          <Route path='/privacy-policy' component={PrivacyPolicyPage}></Route>
         <LoginFooter></LoginFooter>
       </div>
     );

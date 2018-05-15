@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Classes from "./ForgotPage.scss";
+import Classes from "../LoginPage/LoginPage.scss";
 import Yup from 'yup';
 import { Field, Form, Formik } from 'formik';
 
