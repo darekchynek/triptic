@@ -4,11 +4,6 @@ export {
     signUp
 } from './auth';
 export {
-    forgotPass,
-    startForgotPass,
-    forgotPassSucceced
-} from './forgot';
-export {
     enableLoading,
     disableLoading,
     setError,

@@ -4,11 +4,6 @@ export const LOGOUT = 'LOGOUT';
 
 export const SIGNUP = 'SIGNUP';
 
-export const START_FORGOT_PASS = 'START_FORGOT_PASS';
-export const FORGOT_PASS_SUCCEDED = 'FORGOT_PASS_SUCCEDED';
-export const FORGOT_PASS_FAILED = 'FORGOT_PASS_FAILED';
-export const FORGOT_PASS = 'FORGOT_PASS';
-
 export const ENABLE_LOADING = 'ENABLE_LOADING';
 export const DISABLE_LOADING = 'DISABLE_LOADING';
 export const SET_ERROR = 'SET_ERROR';

@@ -16,8 +16,9 @@ export function* authUserSaga(action) {
         yield put(actions.signInSucceded(response.data.idToken, response.data.localId));
         yield put(actions.disableLoading());
     } catch (err) {
+        console.log(err);
+        yield put(actions.setError(err.response.data.error.message));
         yield put(actions.disableLoading());
-        yield put(actions.setError(err.response.data.error));
     }
 }
 
@@ -31,7 +32,7 @@ export function* signupUserSaga(action) {
         yield put(actions.signInSucceded(data.idToken, data.localId));
         yield put(actions.disableLoading());
     } catch (err) {
+        yield put(actions.setError(err.response.data.error.message));
         yield put(actions.disableLoading());
-        yield put(actions.setError(err.response.data.error));
     }
 }

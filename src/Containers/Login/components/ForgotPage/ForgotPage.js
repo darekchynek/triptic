@@ -13,16 +13,16 @@ const ForgotPage = props => {
           <i className="fas fa-car"></i>
         </div>
         <Formik
-          initialValues={{ email: ''}}
+          initialValues={{ email: '' }}
           onSubmit={values => props.onForgotPass(values)}
           validationSchema={validationSchema}
           render={({ errors, touched, isSubmitting, isValid }) => (
             <Form className={Classes.formBox}>
-                <p className={Classes.forgotPassword}>
-                    If You forgot Your Password, type your email address and click "Refresh Password"
+              <p className={Classes.forgotPassword}>
+                If You forgot Your Password, type your email address and click "Refresh Password"
                 </p>
-                <Field className="input" type="text" name="email" placeholder="Email" />
-                  {touched.email}
+              <Field className="input" type="text" name="email" placeholder="Email" />
+              {touched.email}
               <button type='submit' className={Classes.btnLogin} disabled={isSubmitting || !isValid}>Refresh Password</button>
             </Form>
           )}

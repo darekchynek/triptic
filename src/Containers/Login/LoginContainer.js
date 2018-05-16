@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Route, withRouter } from 'react-router-dom';
+import axios from 'axios';
+import { FORGOT_PASS_LINK } from '../../http/url';
 import LoginPage from './components/LoginPage/LoginPage';
 import LoginFooter from './components/LoginFooter/LoginFooter';
 import Classes from './LoginContainer.scss';
@@ -19,11 +21,18 @@ class LoginContainer extends Component {
     this.props.onSignIn(email, password);
   }
 
-  forgotPassHandler = (email) => {
-    this.props.onForgotPass(email);
+  forgotPassHandler = async ({ email }) => {
+    try {
+      this.props.onRequestStart();
+      await axios.post(FORGOT_PASS_LINK, { requestType: "PASSWORD_RESET", email });
+      this.props.onRequestEnds();
+    } catch (err) {
+      this.props.onError(err.response.data.error.message);
+      this.props.onRequestEnds();
+    }
   }
 
-  signUpHandler = (values) => {
+  signUpHandler = values => {
     console.log(values);
   }
 
@@ -51,8 +60,10 @@ class LoginContainer extends Component {
 
 const mapDispatchToProps = dispatch => ({
   onSignIn: (login, password) => dispatch(actions.signIn(login, password)),
-  onForgotPass: email => dispatch(actions.forgotPass(email)),
-  onSignUp: values => dispatch(actions.signUp(values))
+  onSignUp: values => dispatch(actions.signUp(values)),
+  onRequestStart: () => dispatch(actions.enableLoading()),
+  onRequestEnds: () => dispatch(actions.disableLoading()),
+  onError: error => dispatch(actions.setError(error))
 });
 
 export default withRouter(connect(null, mapDispatchToProps)(LoginContainer));
